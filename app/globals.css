@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 320 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 345 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 83.1%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .neon-glow {
+    box-shadow: 0 0 5px theme('colors.primary.DEFAULT'),
+                0 0 10px theme('colors.primary.DEFAULT'),
+                0 0 15px theme('colors.primary.DEFAULT');
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px theme('colors.primary.DEFAULT'),
+                 0 0 10px theme('colors.primary.DEFAULT');
+  }
+  
+  .neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+  
+  .elevation-1 {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3),
+                0 2px 4px -2px rgb(0 0 0 / 0.3);
+    background: linear-gradient(145deg, 
+                hsl(var(--card) / 0.9),
+                hsl(var(--card) / 0.4));
+  }
+  
+  .elevation-2 {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4),
+                0 4px 6px -4px rgb(0 0 0 / 0.4);
+    background: linear-gradient(145deg,
+                hsl(var(--card) / 0.95),
+                hsl(var(--card) / 0.5));
+  }
+  
+  .elevation-3 {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5),
+                0 8px 10px -6px rgb(0 0 0 / 0.5);
+    background: linear-gradient(145deg,
+                hsl(var(--card)),
+                hsl(var(--card) / 0.6));
+  }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

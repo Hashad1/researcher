@@ -1,0 +1,6 @@
+[project]
+project_id = "gydkjtnczybkbjyjlbbq"
+
+[api]
+endpoint = "https://gydkjtnczybkbjyjlbbq.supabase.co"
+anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5ZGtqdG5jenlia2JqeWpsYmJxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ1Njc3NzIsImV4cCI6MjA1MDE0Mzc3Mn0.ZQSKwz4FWRoO2uUC2NUHL4cT8iI0sO7TJtT190O1TW8"
