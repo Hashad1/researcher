@@ -41,19 +41,17 @@ export function RegisterForm() {
     // Normalize the WhatsApp number
     const normalizedWhatsApp = normalizeWhatsApp(formData.whatsapp);
 
-    const { error } = await signUp(
-      normalizedWhatsApp,
-      formData.password,
-      formData.fullName
-    );
-
-    if (error) {
+    try {
+      await signUp(
+        normalizedWhatsApp,
+        formData.password,
+        formData.fullName
+      );
+      router.push("/dashboard");
+    } catch (error: any) {
       setError(error.message);
       setIsSubmitting(false);
-      return;
     }
-
-    router.push("/dashboard");
   };
 
   return (

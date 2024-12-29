@@ -28,7 +28,7 @@ export async function signUp(whatsapp: string, password: string, fullName: strin
     if (signInError) throw signInError;
 
     return { data: signInData, error: null };
-  } catch (error) {
+  } catch (error: any) {
     console.error('Signup error:', error);
     return { 
       data: null, 
@@ -72,7 +72,7 @@ export async function signIn(whatsapp: string, password: string) {
     console.error('Login error:', error);
     return { 
       data: null, 
-      error: error instanceof Error ? error : new Error("حدث خطأ في تسجيل الدخول") 
+      error: error instanceof Error ? error : new Error("رقم الواتساب أو كلمة المرور غير صحيحة") 
     };
   }
 }
